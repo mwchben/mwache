@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  makeStyles,
+  shorthands,
+  FluentProvider,
+  webDarkTheme,
+} from "@fluentui/react-components";
+import Top from "./components/Top";
+import Profile from "./components/Profile";
+import Bottom from "./components/Bottom";
+import { Part } from "./Asset/Part";
+import "./App.css";
+
+const useStyles = makeStyles({
+  container: {
+    ...shorthands.gap("16px"),
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "stretch",
+  },
+});
 
 function App() {
+  const styles = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FluentProvider theme={webDarkTheme} className={styles.container}>
+      <Top />
+      <Part />
+      <Profile />
+      <Part />
+      <Bottom />
+    </FluentProvider>
   );
 }
 

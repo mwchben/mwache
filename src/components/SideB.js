@@ -1,11 +1,15 @@
 import * as React from "react";
-import { Avatar } from "@mui/material";
-import img from "../Asset/images/pic.png";
+import { Typography } from "@mui/material";
 
 function SideB() {
   return (
     <>
-      <Avatar alt="Pic" src={img} sx={{ width: 56, height: 56 }} />
+      <Typography variant="body1" gutterBottom>
+        body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+        blanditiis tenetur unde suscipit, quam beatae rerum inventore
+        consectetur, neque doloribus, cupiditate numquam dignissimos laborum
+        fugiat deleniti? Eum quasi quidem quibusdam.
+      </Typography>
     </>
   );
 }

@@ -1,13 +1,20 @@
 import * as React from "react";
-import { Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import background from "../Asset/images/pic.png";
 
 function SideA() {
   return (
-    <>
-      <Typography component="h1" variant="h3">
-        Aye
-      </Typography>
-    </>
+    <Box
+      component="img"
+      sx={{
+        // height: 1000,
+        // width: 850,
+        maxHeight: { xs: 233, md: 167 },
+        maxWidth: { xs: 350, md: 250 },
+      }}
+      alt="The house from the offer."
+      src={background}
+    />
   );
 }
 

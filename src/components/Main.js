@@ -1,16 +1,12 @@
 import * as React from "react";
 import Topbar from "./Environment/Topbar";
-import { Typography, Box } from "@mui/material";
+import Content from "./Environment/Content";
 
 function SideB() {
   return (
     <>
       <Topbar />
-      <Typography component="div">
-        <Box sx={{ letterSpacing: 6, m: 1, fontFamily: "Monospace" }}>
-          Letter Spacing 6px.
-        </Box>
-      </Typography>
+      <Content />
     </>
   );
 }

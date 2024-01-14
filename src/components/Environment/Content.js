@@ -2,16 +2,10 @@ import * as React from "react";
 import { Typography, Box } from "@mui/material";
 import Stack from "@mui/material/Stack";
 
-let myLangs = new Array(["fwaerfa", "sdfas", "ifv"]);
-
-const hellos = () => {
-  for (let i = 0; i < myLangs.length; i++) {
-    let word = [i];
-    return <p>word</p>;
-  }
-};
-
-setInterval(hellos, 50);
+var myLangs = ["fwaerfa", "sdfas", "ifv"];
+const words = myLangs.map((word) => {
+  return <p>{word}</p>;
+});
 
 export default function Content() {
   return (
@@ -29,7 +23,7 @@ export default function Content() {
               textTransform: "capitalize",
             }}
           >
-            Dear Friend {hellos()}
+            Dear Friend {setInterval(words, 500)}
           </Box>
         </Typography>
         <Typography component="div">

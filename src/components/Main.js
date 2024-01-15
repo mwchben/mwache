@@ -1,6 +1,6 @@
 import * as React from "react";
-import Topbar from "./Environment/Topbar";
-import Content from "./Environment/Content";
+import Topbar from "./Layout/Topbar";
+import Content from "./Layout/Content";
 
 function SideB() {
   return (

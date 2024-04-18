@@ -8,8 +8,8 @@ export default function Topbar() {
     <>
       <Box sx={{ textAlign: "center", m: 1 }}>
         <Button sx={{ color: "#e4e6eb" }}>
-          <GitHubIcon fontSize="large" />
-          <XIcon fontSize="large" />
+          <GitHubIcon className="hover" fontSize="large" /> 
+          <XIcon className="hover" fontSize="large" />
         </Button>
       </Box>
     </>

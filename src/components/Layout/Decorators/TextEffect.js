@@ -32,13 +32,13 @@ function TextEffext() {
               typeSpeed={70}
               deleteSpeed={50}
               delaySpeed={1000}
-            />
+            /><span style={{ color: "#31dd21" }}><Cursor /></span>
         </Box>
           
         </Typography>
-      <span style={{ color: "green" }}>
-        <Cursor />
-      </span>
+      
+        
+      
     </h2>
   );
 }

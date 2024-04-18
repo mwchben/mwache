@@ -1,17 +1,31 @@
 import * as React from "react";
-import { Typography, Link } from "@mui/material";
+import { Typography, Link,Box } from "@mui/material";
 
 function Copyright(props) {
   return (
     <>
-      <Typography variant="body2" color="#e4e6eb" align="center" {...props}>
-        {"Copyright © "}
-        <Link color="inherit" href="https://github.com/mwchben">
+    <Typography component="div">
+          <Box
+            sx={{
+              letterSpacing: 4,
+              m: 1,
+              fontFamily: "Monospace",
+              textAlign: "left",
+              fontWeight: "bold",
+              textTransform: "capitalize",
+            }}
+            align="center" 
+            {...props}>
+            {"Copyright © "}       
+            <Link color="inherit" href="https://github.com/mwchben">
           Mwache
-        </Link>{" "}
-        {new Date().getFullYear()}
-        {"."}
-      </Typography>
+            </Link>
+            {" "}{new Date().getFullYear()}
+            {"."}
+          </Box>
+        </Typography>
+
+  
     </>
   );
 }

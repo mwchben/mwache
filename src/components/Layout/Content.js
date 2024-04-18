@@ -52,20 +52,7 @@ export default function Content() {
             and happy dogs.
           </Box>
         </Typography>{" "}
-        <Typography component="div">
-          <Box
-            sx={{
-              letterSpacing: 4,
-              m: 1,
-              fontFamily: "Monospace",
-              textAlign: "left",
-              fontWeight: "bold",
-              textTransform: "capitalize",
-            }}
-          >
-            Yours Sincerly,
-          </Box>
-        </Typography>
+       
         <Typography component="div">
           <Box
             sx={{

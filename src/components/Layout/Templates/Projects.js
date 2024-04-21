@@ -12,6 +12,8 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import sampleImg from '../../../Asset/images/lio.png';
+
 
 const items = [
   {
@@ -19,24 +21,19 @@ const items = [
     title: 'Dashboard',
     description:
       'This item could provide a snapshot of the most important metrics or data points related to the product.',
-    imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
     title: 'Mobile integration',
     description:
       'This item could provide information about the mobile app version of the product.',
-    imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+    backgroundImage: sampleImg
   },
   {
     icon: <DevicesRoundedIcon />,
     title: 'Available on all platforms',
     description:
       'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
-    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
   },
 ];
 
@@ -50,18 +47,18 @@ export default function Projects() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
-    <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
+    <Container sx={{ py: { xs: 4, sm: 4 } }}>
       <Grid container spacing={6}>
 
       <Grid item xs={12} sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}>
         <div>
-                <Typography component="h2" variant="h4" color="text.primary">
-                  Product features
+                <Typography component="h2" variant="h4" color="text.primary" textAlign="center">
+                  Welcome to MwaChe's Site
                 </Typography>
                 <Typography
                   variant="body1"
                   color="text.secondary"
-                  sx={{ mb: { xs: 2, sm: 4 } }}
+                  sx={{ mb: { xs: 2, sm: 4 }, mt: 2}}
                 >
                   Here you can provide a brief overview of the key features of the
                   product. For example, you could list the number of features, the types
@@ -93,10 +90,7 @@ export default function Projects() {
                     width: 420,
                     height: 500,
                     backgroundSize: 'contain',
-                    backgroundImage: (theme) =>
-                      theme.palette.mode === 'light'
-                        ? items[selectedItemIndex].imageLight
-                        : items[selectedItemIndex].imageDark,
+                    backgroundImage: sampleImg,
                   }}
                 />
               </Card>
@@ -113,15 +107,9 @@ export default function Projects() {
                     onClick={() => handleItemClick(index)}
                     sx={{
                       borderColor: (theme) => {
-                        if (theme.palette.mode === 'light') {
-                          return selectedItemIndex === index ? 'primary.light' : '';
-                        }
-                        return selectedItemIndex === index ? 'primary.light' : '';
+                        return selectedItemIndex === index ? 'beige.light' : '';
                       },
                       background: (theme) => {
-                        if (theme.palette.mode === 'light') {
-                          return selectedItemIndex === index ? 'none' : '';
-                        }
                         return selectedItemIndex === index ? 'none' : '';
                       },
                       backgroundColor: selectedItemIndex === index ? 'primary.main' : '',
@@ -142,10 +130,7 @@ export default function Projects() {
               >
                 <Box
                   sx={{
-                    backgroundImage: (theme) =>
-                      theme.palette.mode === 'light'
-                        ? items[selectedItemIndex].imageLight
-                        : items[selectedItemIndex].imageDark,
+                    backgroundImage: sampleImg,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     minHeight: 280,
@@ -159,13 +144,13 @@ export default function Projects() {
                     {selectedFeature.description}
                   </Typography>
                   <Link
-                    color="primary"
+                    color="beige"
                     variant="body2"
                     fontWeight="bold"
                     sx={{
                       display: 'inline-flex',
                       alignItems: 'center',
-                      '& > svg': { transition: '0.2s' },
+                      '& > svg': { transition: '0.5s' },
                       '&:hover > svg': { transform: 'translateX(2px)' },
                     }}
                   >
@@ -201,10 +186,10 @@ export default function Projects() {
                       borderColor: (theme) => {
                         if (theme.palette.mode === 'light') {
                           return selectedItemIndex === index
-                            ? 'primary.light'
-                            : 'grey.200';
+                            ? 'beige.light'
+                            : 'secondary.30';
                         }
-                        return selectedItemIndex === index ? 'primary.dark' : 'grey.800';
+                        return selectedItemIndex === index ? 'beige.dark' : 'secondary.40';
                       },
                     }}
                   >

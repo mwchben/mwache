@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #242526;
+  /* background-color: #242526; */
+  background-color: #000000;
 
 }
 
@@ -17,5 +18,6 @@ code {
 }
 
 .hover:hover {
-  color: #31dd21
+  /* color: #4E9F3D */
+  color: #1ff316
   }

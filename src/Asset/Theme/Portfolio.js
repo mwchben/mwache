@@ -169,16 +169,9 @@ export default function Portfolio(mode) {
         styleOverrides: {
           root: ({ theme }) => ({
             borderRadius: '10px',
-            boxShadow: `0 4px 16px ${alpha(secondary[40], 0.2)}`,
             '& .Mui-selected': {
               color: beige[30],
             },
-            ...(theme.palette.mode === 'dark' && {
-              '& .Mui-selected': {
-                color: '#fff',
-              },
-              boxShadow: `0 4px 16px ${alpha(beige[10], 0.5)}`,
-            }),
           }),
         },
       },
@@ -189,11 +182,6 @@ export default function Portfolio(mode) {
             textTransform: 'none',
             borderRadius: '10px',
             fontWeight: 30,
-            ...(theme.palette.mode === 'dark' && {
-              color: secondary[40],
-              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.5)',
-              '&.Mui-selected': { color: beige[30] },
-            }),
           }),
         },
       },
@@ -229,19 +217,7 @@ export default function Portfolio(mode) {
             ...(ownerState.size === 'medium' && {
               height: '40px',
             }),
-            ...(ownerState.variant === 'contained' &&
-              ownerState.color === 'primary' && {
-                color: beige[50],
-                background: beige[30],
-                backgroundImage: `linear-gradient(to bottom, ${beige[30]}, ${beige[30]})`,
-                boxShadow: `inset 0 1px ${alpha(beige[20], 0.4)}`,
-                outline: `1px solid ${beige[40]}`,
-                '&:hover': {
-                  background: beige[30],
-                  backgroundImage: 'none',
-                  boxShadow: `0 0 0 1px  ${alpha(beige[20], 0.5)}`,
-                },
-              }),
+            
             ...(ownerState.variant === 'outlined' && {
               backgroundColor: alpha(beige[20], 0.1),
               borderColor: beige[20],
@@ -283,7 +259,7 @@ export default function Portfolio(mode) {
         styleOverrides: {
           root: ({ theme, ownerState }) => ({
             backgroundColor: secondary[50],
-            borderRadius: 10,
+            borderRadius: 5,
             border: `1px solid ${alpha(secondary[20], 0.8)}`,
             boxShadow: 'none',
             transition: 'background-color, border, 80ms ease',

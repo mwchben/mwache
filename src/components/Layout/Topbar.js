@@ -7,7 +7,7 @@ export default function Topbar() {
   return (
     <>
       <Box sx={{ textAlign: "center", m: 1 }}>
-        <Button sx={{ color: "#e4e6eb" }}>
+        <Button sx={{ color: "#D8E9A8" }}>
           <GitHubIcon className="hover" fontSize="large" /> 
           <XIcon className="hover" fontSize="large" />
         </Button>

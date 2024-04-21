@@ -24,8 +24,6 @@ function Copyright(props) {
             {"."}
           </Box>
         </Typography>
-
-  
     </>
   );
 }

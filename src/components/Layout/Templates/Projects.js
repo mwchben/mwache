@@ -12,7 +12,8 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
-import sampleImg from '../../../Asset/images/lio.png';
+import imgLio from '../../../Asset/images/lio.png';
+import imgProg from '../../../Asset/images/prog.png';
 
 
 const items = [
@@ -27,7 +28,7 @@ const items = [
     title: 'Mobile integration',
     description:
       'This item could provide information about the mobile app version of the product.',
-    backgroundImage: sampleImg
+    backgroundImage: `url(${imgLio})`
   },
   {
     icon: <DevicesRoundedIcon />,
@@ -82,15 +83,21 @@ export default function Projects() {
                   width: '100%',
                   display: { xs: 'none', sm: 'flex' },
                   pointerEvents: 'none',
+                  backgroundImage:`url(${imgLio})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
                 }}
+                
               >
+
+                {/* img ya bigSize */}
                 <Box
                   sx={{
                     m: 'auto',
                     width: 420,
                     height: 500,
                     backgroundSize: 'contain',
-                    backgroundImage: sampleImg,
+                    backgroundImage: `url(${imgProg})`,
                   }}
                 />
               </Card>
@@ -99,7 +106,8 @@ export default function Projects() {
 {/* ............................RIGHT.................... */}
             <Grid item xs={12} md={6}>
               
-              <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
+              {/* box for iPhoneSize */}
+              <Grid container item gap={2} sx={{ display: { xs: 'auto', sm: 'none' } }}>
                 {items.map(({ title }, index) => (
                   <Chip
                     key={index}
@@ -107,14 +115,14 @@ export default function Projects() {
                     onClick={() => handleItemClick(index)}
                     sx={{
                       borderColor: (theme) => {
-                        return selectedItemIndex === index ? 'beige.light' : '';
+                        return selectedItemIndex === 'beige.light';
                       },
                       background: (theme) => {
-                        return selectedItemIndex === index ? 'none' : '';
+                        return selectedItemIndex === 'secondary.dark';
                       },
-                      backgroundColor: selectedItemIndex === index ? 'primary.main' : '',
+                      backgroundColor: selectedItemIndex === 'secondary.dark',
                       '& .MuiChip-label': {
-                        color: selectedItemIndex === index ? '#fff' : '',
+                        color: selectedItemIndex === index ? 'secondary.main' : '',
                       },
                     }}
                   />
@@ -127,16 +135,16 @@ export default function Projects() {
                   display: { xs: 'auto', sm: 'none' },
                   mt: 4,
                 }}
-              >
+              >                
                 <Box
                   sx={{
-                    backgroundImage: sampleImg,
+                    backgroundImage: `url(${imgLio})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     minHeight: 280,
                   }}
                 />
-                <Box sx={{ px: 2, pb: 2 }}>
+                <Box sx={{ px: 2, py: 2, backgroundColor: "#000" }}>
                   <Typography color="text.primary" variant="body2" fontWeight="bold">
                     {selectedFeature.title}
                   </Typography>
@@ -162,6 +170,9 @@ export default function Projects() {
                   </Link>
                 </Box>
               </Box>
+
+
+              {/* box for WebSite size */}
               <Stack
                 direction="column"
                 justifyContent="center"

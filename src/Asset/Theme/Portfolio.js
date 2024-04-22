@@ -263,73 +263,53 @@ export default function Portfolio(mode) {
             border: `1px solid ${alpha(secondary[20], 0.8)}`,
             boxShadow: 'none',
             transition: 'background-color, border, 80ms ease',
-            ...(ownerState.variant === 'outlined' && {
-              background: `linear-gradient(to bottom, #FFF, ${secondary[50]})`,
-              '&:hover': {
-                borderColor: beige[20],
-                boxShadow: `0 0 24px ${beige[10]}`,
-              },
-            }),
-            ...(theme.palette.mode === 'dark' && {
-              backgroundColor: alpha(secondary[40], 0.6),
-              border: `1px solid ${alpha(secondary[40], 0.3)}`,
-              ...(ownerState.variant === 'outlined' && {
-                background: `linear-gradient(to bottom, ${secondary[50]}, ${alpha(
-                  secondary[40],
-                  0.5,
-                )})`,
-                '&:hover': {
-                  borderColor: beige[40],
-                  boxShadow: `0 0 24px ${beige[40]}`,
-                },
-              }),
-            }),
+            
           }),
         },
       },
-      MuiChip: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            alignSelf: 'center',
-            py: 1.5,
-            px: 0.5,
-            background: `linear-gradient(to bottom right, ${beige[50]}, ${beige[10]})`,
-            border: '1px solid',
-            borderColor: `${alpha(beige[30], 0.3)}`,
-            fontWeight: '30',
-            '&:hover': {
-              backgroundColor: beige[30],
-            },
-            '&:focus-visible': {
-              borderColor: beige[40],
-              backgroundColor: beige[20],
-            },
-            '& .MuiChip-label': {
-              color: beige[30],
-            },
-            '& .MuiChip-icon': {
-              color: beige[30],
-            },
-            ...(theme.palette.mode === 'dark' && {
-              background: `linear-gradient(to bottom right, ${beige[40]}, ${beige[50]})`,
-              borderColor: `${alpha(beige[30], 0.5)}`,
-              '&:hover': {
-                backgroundColor: beige[30],
-              },
-              '&:focus-visible': {
-                borderColor: beige[20],
-                backgroundColor: beige[30],
-              },
-              '& .MuiChip-label': {
-                color: beige[20],
-              },
-              '& .MuiChip-icon': {
-                color: beige[20],
-              },
-            }),
-          }),
-        },
-      },
+      // MuiChip: {
+      //   styleOverrides: {
+      //     root: ({ theme }) => ({
+      //       alignSelf: 'center',
+      //       py: 1.5,
+      //       px: 0.5,
+      //       background: `linear-gradient(to bottom right, ${beige[50]}, ${beige[10]})`,
+      //       border: '1px solid',
+      //       borderColor: `${alpha(beige[30], 0.3)}`,
+      //       fontWeight: '30',
+      //       '&:hover': {
+      //         backgroundColor: beige[30],
+      //       },
+      //       '&:focus-visible': {
+      //         borderColor: beige[40],
+      //         backgroundColor: beige[20],
+      //       },
+      //       '& .MuiChip-label': {
+      //         color: beige[30],
+      //       },
+      //       '& .MuiChip-icon': {
+      //         color: beige[30],
+      //       },
+      //       ...(theme.palette.mode === 'dark' && {
+      //         background: `linear-gradient(to bottom right, ${beige[40]}, ${beige[50]})`,
+      //         borderColor: `${alpha(beige[30], 0.5)}`,
+      //         '&:hover': {
+      //           backgroundColor: beige[30],
+      //         },
+      //         '&:focus-visible': {
+      //           borderColor: beige[20],
+      //           backgroundColor: beige[30],
+      //         },
+      //         '& .MuiChip-label': {
+      //           color: beige[20],
+      //         },
+      //         '& .MuiChip-icon': {
+      //           color: beige[20],
+      //         },
+      //       }),
+      //     }),
+      //   },
+      // },
       MuiDivider: {
         styleOverrides: {
           root: ({ theme }) => ({

@@ -4,3 +4,7 @@
 :root {
   color: #D8E9A8;
 }
+:root > div:hover  {
+  transition: none;
+  transform: none;
+}

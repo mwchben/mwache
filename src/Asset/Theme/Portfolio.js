@@ -148,18 +148,7 @@ export default function Portfolio(mode) {
           }),
         },
       },
-      MuiAccordionSummary: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            border: 'none',
-            borderRadius: 8,
-            '&:hover': { backgroundColor: secondary[20] },
-            ...(theme.palette.mode === 'dark' && {
-              '&:hover': { backgroundColor: secondary[30] },
-            }),
-          }),
-        },
-      },
+      
       MuiAccordionDetails: {
         styleOverrides: {
           root: { mb: 20, border: 'none' },
@@ -195,7 +184,7 @@ export default function Portfolio(mode) {
             boxSizing: 'border-box',
             transition: 'all 100ms ease-in',
             '&:focus-visible': {
-              outline: `3px solid ${alpha(beige[50], 0.5)}`,
+              outline: `3px solid ${(beige[0])}`,
               outlineOffset: '2px',
             },
           },
@@ -210,116 +199,46 @@ export default function Portfolio(mode) {
             textTransform: 'none',
             '&:active': {
               transform: 'scale(0.98)',
-            },
-            ...(ownerState.size === 'small' && {
-              maxHeight: '32px',
-            }),
-            ...(ownerState.size === 'medium' && {
-              height: '40px',
-            }),
-            
-            ...(ownerState.variant === 'outlined' && {
-              backgroundColor: alpha(beige[20], 0.1),
-              borderColor: beige[20],
-              color: beige[30],
-              '&:hover': {
-                backgroundColor: alpha(beige[20], 0.3),
-                borderColor: beige[20],
-              },
-            }),
+            },     
+           
             ...(ownerState.variant === 'text' && {
-              color: beige[30],
+              color: beige[50],
               '&:hover': {
-                backgroundColor: alpha(beige[20], 0.3),
+                backgroundColor: alpha(secondary[20], 0.3),
                 borderColor: beige[20],
               },
             }),
-            ...(theme.palette.mode === 'dark' && {
-              ...(ownerState.variant === 'outlined' && {
-                backgroundColor: alpha(beige[30], 0.1),
-                borderColor: beige[40],
-                color: beige[20],
-                '&:hover': {
-                  backgroundColor: alpha(beige[30], 0.3),
-                  borderColor: beige[40],
-                },
-              }),
-              ...(ownerState.variant === 'text' && {
-                color: beige[20],
-                '&:hover': {
-                  backgroundColor: alpha(beige[30], 0.3),
-                  borderColor: beige[40],
-                },
-              }),
-            }),
-          }),
-        },
-      },
-      MuiCard: {
-        styleOverrides: {
-          root: ({ theme, ownerState }) => ({
-            backgroundColor: secondary[50],
-            borderRadius: 5,
-            border: `1px solid ${alpha(secondary[20], 0.8)}`,
-            boxShadow: 'none',
-            transition: 'background-color, border, 80ms ease',
             
           }),
         },
       },
-      // MuiChip: {
+      // MuiCard: {
       //   styleOverrides: {
-      //     root: ({ theme }) => ({
-      //       alignSelf: 'center',
-      //       py: 1.5,
-      //       px: 0.5,
-      //       background: `linear-gradient(to bottom right, ${beige[50]}, ${beige[10]})`,
-      //       border: '1px solid',
-      //       borderColor: `${alpha(beige[30], 0.3)}`,
-      //       fontWeight: '30',
-      //       '&:hover': {
-      //         backgroundColor: beige[30],
-      //       },
-      //       '&:focus-visible': {
-      //         borderColor: beige[40],
-      //         backgroundColor: beige[20],
-      //       },
-      //       '& .MuiChip-label': {
-      //         color: beige[30],
-      //       },
-      //       '& .MuiChip-icon': {
-      //         color: beige[30],
-      //       },
+      //     root: ({ theme, ownerState }) => ({
+      //       backgroundColor: secondary[50],
+      //       borderRadius: 5,
+      //       border: `1px solid ${secondary[20]}`,
+      //       boxShadow: 'none',
+      //       transition: 'background-color, border, 80ms ease',
       //       ...(theme.palette.mode === 'dark' && {
-      //         background: `linear-gradient(to bottom right, ${beige[40]}, ${beige[50]})`,
-      //         borderColor: `${alpha(beige[30], 0.5)}`,
-      //         '&:hover': {
-      //           backgroundColor: beige[30],
-      //         },
-      //         '&:focus-visible': {
-      //           borderColor: beige[20],
-      //           backgroundColor: beige[30],
-      //         },
-      //         '& .MuiChip-label': {
-      //           color: beige[20],
-      //         },
-      //         '& .MuiChip-icon': {
-      //           color: beige[20],
-      //         },
+      //         backgroundColor: alpha(secondary[40], 0.6),
+      //         border: `1px solid ${alpha(secondary[40], 0.3)}`,
+      //         ...(ownerState.variant === 'outlined' && {
+      //           background: `linear-gradient(to bottom, ${secondary[50]}, ${alpha(
+      //             secondary[40],
+      //             0.5,
+      //           )})`,
+      //           '&:hover': {
+      //             borderColor: beige[40],
+      //             boxShadow: `0 0 24px ${beige[40]}`,
+      //           },
+      //         }),
       //       }),
       //     }),
       //   },
       // },
-      MuiDivider: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            borderColor: `${alpha(secondary[20], 0.8)}`,
-            ...(theme.palette.mode === 'dark' && {
-              borderColor: `${alpha(secondary[40], 0.4)}`,
-            }),
-          }),
-        },
-      },
+      
+      
       MuiLink: {
         defaultProps: {
           underline: 'none',
@@ -374,132 +293,7 @@ export default function Portfolio(mode) {
           }),
         },
       },
-      MuiSwitch: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            boxSizing: 'border-box',
-            width: 36,
-            height: 24,
-            padding: 0,
-            transition: 'background-color 100ms ease-in',
-            '&:hover': {
-              '& .MuiSwitch-track': {
-                backgroundColor: beige[30],
-              },
-            },
-            '& .MuiSwitch-switchBase': {
-              '&.Mui-checked': {
-                transform: 'translateX(13px)',
-              },
-            },
-            '& .MuiSwitch-track': {
-              borderRadius: 50,
-            },
-            '& .MuiSwitch-thumb': {
-              boxShadow: '0 0 2px 2px rgba(0, 0, 0, 0.2)',
-              backgroundColor: '#FFF',
-              width: 16,
-              height: 16,
-              margin: 2,
-            },
-            ...(theme.palette.mode === 'dark' && {
-              width: 36,
-              height: 24,
-              padding: 0,
-              transition: 'background-color 100ms ease-in',
-              '&:hover': {
-                '& .MuiSwitch-track': {
-                  backgroundColor: beige[30],
-                },
-              },
-              '& .MuiSwitch-switchBase': {
-                '&.Mui-checked': {
-                  transform: 'translateX(13px)',
-                },
-              },
-              '& .MuiSwitch-thumb': {
-                boxShadow: '0 0 2px 2px rgba(0, 0, 0, 0.2)',
-                backgroundColor: '#FFF',
-                width: 16,
-                height: 16,
-                margin: 2,
-              },
-            }),
-          }),
-          switchBase: {
-            height: 24,
-            width: 24,
-            padding: 0,
-            color: '#fff',
-            '&.Mui-checked + .MuiSwitch-track': {
-              opacity: 1,
-            },
-          },
-        },
-      },
-      MuiTextField: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            '& label .Mui-focused': {
-              color: 'white',
-            },
-            '& .MuiInputBase-input': {
-              boxSizing: 'border-box',
-              '&::placeholder': {
-                opacity: 0.7,
-              },
-            },
-            '& .MuiOutlinedInput-root': {
-              boxSizing: 'border-box',
-              minWidth: 280,
-              minHeight: 40,
-              height: '100%',
-              borderRadius: '10px',
-              border: '1px solid',
-              borderColor: secondary[20],
-              transition: 'border-color 120ms ease-in',
-              '& fieldset': {
-                border: 'none',
-                boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
-                background: `${alpha('#FFF', 0.3)}`,
-              },
-              '&:hover': {
-                borderColor: beige[20],
-              },
-              '&.Mui-focused': {
-                borderColor: beige[30],
-                outline: '4px solid',
-                outlineColor: beige[20],
-              },
-            },
-            ...(theme.palette.mode === 'dark' && {
-              '& .MuiOutlinedInput-root': {
-                boxSizing: 'border-box',
-                minWidth: 280,
-                minHeight: 40,
-                height: '100%',
-                borderRadius: '10px',
-                border: '1px solid',
-                borderColor: secondary[30],
-                transition: 'border-color 120ms ease-in',
-                '& fieldset': {
-                  border: 'none',
-                  boxShadow: ' 0px 2px 4px rgba(0, 0, 0, 0.4)',
-                  background: `${alpha(secondary[40], 0.4)}`,
-                },
-                '&:hover': {
-                  borderColor: beige[20],
-                },
-                '&.Mui-focused': {
-                  borderColor: beige[30],
-                  outline: '4px solid',
-                  outlineColor: alpha(beige[30], 0.5),
-                },
-              },
-            }),
-          }),
-        },
-      },
+      
     },
   };
 }

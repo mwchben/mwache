@@ -28,7 +28,6 @@ const items = [
     title: 'Mobile integration',
     description:
       'This item could provide information about the mobile app version of the product.',
-    backgroundImage: `url(${imgLio})`
   },
   {
     icon: <DevicesRoundedIcon />,
@@ -48,10 +47,9 @@ export default function Projects() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
-    <Container sx={{ py: { xs: 4, sm: 4 } }}>
-      <Grid container spacing={6}>
-
-      <Grid item xs={12} sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}>
+    <>
+    
+    <Grid item xs={12} sx={{ display: { sm: 'flex' }, width: '100%' }}>
         <div>
                 <Typography component="h2" variant="h4" color="text.primary" textAlign="center">
                   Welcome to MwaChe's Site
@@ -61,15 +59,23 @@ export default function Projects() {
                   color="text.secondary"
                   sx={{ mb: { xs: 2, sm: 4 }, mt: 2}}
                 >
-                  Here you can provide a brief overview of the key features of the
-                  product. For example, you could list the number of features, the types
-                  of features, add-ons, or the benefits of the features.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                   sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </Typography>
         </div>
       </Grid>
+    
+    <Container sx={{ py: { xs: 4, sm: 4 } }}>
+      
+      <Grid container spacing={6}>
 
+
+      
 
 {/* ..........................LEFT.................... */}
+ 
           <Grid
               item
               xs={12}
@@ -83,9 +89,7 @@ export default function Projects() {
                   width: '100%',
                   display: { xs: 'none', sm: 'flex' },
                   pointerEvents: 'none',
-                  backgroundImage:`url(${imgLio})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
+                  
                 }}
                 
               >
@@ -98,6 +102,9 @@ export default function Projects() {
                     height: 500,
                     backgroundSize: 'contain',
                     backgroundImage: `url(${imgProg})`,
+                    
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
                   }}
                 />
               </Card>
@@ -138,10 +145,11 @@ export default function Projects() {
               >                
                 <Box
                   sx={{
-                    backgroundImage: `url(${imgLio})`,
+                    backgroundImage: `url(${imgProg})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     minHeight: 280,
+                    
                   }}
                 />
                 <Box sx={{ px: 2, py: 2, backgroundColor: "#000" }}>
@@ -271,8 +279,11 @@ export default function Projects() {
                 ))}
               </Stack>
             </Grid>
+
+       
         
       </Grid>
     </Container>
+    </>
   );
 }

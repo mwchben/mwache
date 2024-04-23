@@ -12,8 +12,8 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
-import imgLio from '../../../Asset/images/lio.png';
-import imgProg from '../../../Asset/images/prog.png';
+import imgProg from '../../../Asset/images/prog.jpg';
+import imgSVG from '../../../Asset/images/patternSVG.svg';
 
 
 const items = [
@@ -97,14 +97,10 @@ export default function Projects() {
                 {/* img ya bigSize */}
                 <Box
                   sx={{
-                    m: 'auto',
+                  
                     width: 420,
                     height: 500,
-                    backgroundSize: 'contain',
-                    backgroundImage: `url(${imgProg})`,
-                    
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
+                                   
                   }}
                 />
               </Card>
@@ -145,11 +141,7 @@ export default function Projects() {
               >                
                 <Box
                   sx={{
-                    backgroundImage: `url(${imgProg})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    minHeight: 280,
-                    
+                   minHeight: 280,
                   }}
                 />
                 <Box sx={{ px: 2, py: 2, backgroundColor: "#000" }}>

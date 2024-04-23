@@ -204,7 +204,7 @@ export default function Portfolio(mode) {
             ...(ownerState.variant === 'text' && {
               color: beige[50],
               '&:hover': {
-                backgroundColor: alpha(secondary[20], 0.3),
+                backgroundColor: "none",
                 borderColor: beige[20],
               },
             }),
@@ -256,7 +256,7 @@ export default function Portfolio(mode) {
               height: '1px',
               bottom: 0,
               left: 0,
-              backgroundColor: beige[20],
+              backgroundColor: "#1ff316",
               opacity: 0.7,
               transition: 'width 0.3s ease, opacity 0.3s ease',
             },
@@ -286,10 +286,8 @@ export default function Portfolio(mode) {
         styleOverrides: {
           root: ({ theme }) => ({
             backgroundImage: 'none',
-            backgroundColor: secondary[10],
-            ...(theme.palette.mode === 'dark' && {
-              backgroundColor: alpha(secondary[50], 0.6),
-            }),
+            backgroundColor: "none",
+            
           }),
         },
       },

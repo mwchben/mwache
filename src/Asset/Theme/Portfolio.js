@@ -205,7 +205,7 @@ export default function Portfolio(mode) {
               color: beige[50],
               '&:hover': {
                 backgroundColor: "none",
-                borderColor: beige[20],
+                borderColor: "#1ff316",
               },
             }),
             

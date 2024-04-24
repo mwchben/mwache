@@ -12,6 +12,7 @@ import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import Me from './Me';
 import imgProg from '../../../Asset/images/prog.jpg';
 import imgSVG from '../../../Asset/images/patternSVG.svg';
 
@@ -82,28 +83,11 @@ export default function Projects() {
               md={6}
               sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}
             >
-              <Card
-                variant="outlined"
-                sx={{
-                  height: '100%',
-                  width: '100%',
-                  display: { xs: 'none', sm: 'flex' },
-                  pointerEvents: 'none',
-                  
-                }}
-                
-              >
+            <Me/>
+              
 
                 {/* img ya bigSize */}
-                <Box
-                  sx={{
-                  
-                    width: 420,
-                    height: 500,
-                                   
-                  }}
-                />
-              </Card>
+               
             </Grid>
 
 {/* ............................RIGHT.................... */}

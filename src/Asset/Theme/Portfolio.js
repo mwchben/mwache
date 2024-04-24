@@ -69,7 +69,7 @@ const getDesignTokens = (mode) => ({
   },
 
   typography: {
-    fontFamily: ['"Inter", "sans-serif","Pacifico"'].join(','),
+    fontFamily: ['"Inter", "sans-serif","Inconsolata","Itim","Kosugi Maru"'].join(','),
     h1: {
       fontSize: 60,
       fontWeight: 30,

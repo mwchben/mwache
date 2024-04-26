@@ -57,7 +57,7 @@ const getDesignTokens = (mode) => ({
     divider: "#A6B779",
     background: {
       default: '#fff',
-      paper: "#77874C",
+      paper: "transparent",
     },
     text: {
       primary: beige[40],
@@ -69,7 +69,7 @@ const getDesignTokens = (mode) => ({
   },
 
   typography: {
-    fontFamily: ['"Inter", "sans-serif","Inconsolata","Itim","Kosugi Maru"'].join(','),
+    fontFamily: ['"Inter", "sans-serif","Concert One","Inconsolata","Itim","Kosugi Maru"'].join(','),
     h1: {
       fontSize: 60,
       fontWeight: 30,
@@ -105,7 +105,7 @@ const getDesignTokens = (mode) => ({
     },
     body1: {
       fontWeight: 30,
-      fontSize: 15,
+      fontSize: 20,
     },
     body2: {
       fontWeight: 30,

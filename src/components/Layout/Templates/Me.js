@@ -7,10 +7,10 @@ function Me() {
   return (
     <Grid item>
       
-            <Typography component="h2" variant="h5">
+            <Typography component="h2" variant="h5" textAlign={"center"} >
               Bleh
             </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
+            <Typography variant="subtitle1" textAlign={"center"} color="text.secondary">
             54/54/2014
             </Typography>
             <Typography variant="subtitle1" paragraph color="text.secondary" >

@@ -58,7 +58,7 @@ export default function Projects() {
                 <Typography
                   variant="body1"
                   color="text.secondary"
-                  sx={{ mb: { xs: 2, sm: 4 }, mt: 2}}
+                  sx={{ mb: { xs: 2, sm: 4 }, mt: 2, p: 3}}
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -115,6 +115,7 @@ export default function Projects() {
                   />
                 ))}
               </Grid>
+              
               <Box
                 component={Card}
                 variant="outlined"
@@ -123,11 +124,7 @@ export default function Projects() {
                   mt: 4,
                 }}
               >                
-                <Box
-                  sx={{
-                   minHeight: 280,
-                  }}
-                />
+               
                 <Box sx={{ px: 2, py: 2, backgroundColor: "#000" }}>
                   <Typography color="text.primary" variant="body2" fontWeight="bold">
                     {selectedFeature.title}
@@ -153,8 +150,16 @@ export default function Projects() {
                     />
                   </Link>
                 </Box>
+                <Box
+                  sx={{
+                   minHeight: 280,
+                   mt: 4,
+                   p: 4                 
+                  }}
+                ><  Me/></Box>
               </Box>
-
+            
+              
 
               {/* box for WebSite size */}
               <Stack

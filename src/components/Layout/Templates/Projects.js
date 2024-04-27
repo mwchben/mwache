@@ -15,6 +15,7 @@ import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 import Me from './Me';
 import imgProg from '../../../Asset/images/prog.jpg';
 import imgSVG from '../../../Asset/images/patternSVG.svg';
+import imgAvatar from '../../../Asset/images/avatar.png';
 
 
 const items = [
@@ -51,7 +52,21 @@ export default function Projects() {
     <>
     
     <Grid item xs={12} sx={{ display: { sm: 'flex' }, width: '100%' }}>
+        
+   
         <div>
+        <Box
+            component="img"
+            sx={{
+              height: 233,
+              width: 350,
+              alignItems: 'center',
+              maxHeight: { xs: 233, md: 167 },
+              maxWidth: { xs: 350, md: 250 },
+            }}
+            alt="Mwache's avatar imgure 😂"
+            src= {imgAvatar}
+        />
                 <Typography component="h2" variant="h4" color="text.primary" textAlign="center">
                   Welcome to MwaChe's Site
                 </Typography>

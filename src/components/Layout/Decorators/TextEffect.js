@@ -8,6 +8,7 @@ function TextEffext() {
     <h2>
       {""}
       <Typography component="div">
+        
         <Box sx={{ 
            textAlign: 'center',
            m: 1,
@@ -16,6 +17,7 @@ function TextEffext() {
            fontWeight: "bold",
               
          }}>
+          &#123;{"  "}
           <Typewriter
               words={[
                 "Ciao!",
@@ -32,7 +34,8 @@ function TextEffext() {
               typeSpeed={70}
               deleteSpeed={50}
               delaySpeed={1000}
-            /><span style={{ color: "#31dd21" }}><Cursor /></span>
+            />
+            <span style={{ color: "#31dd21" }}><Cursor /></span>  &#125;
         </Box>
           
         </Typography>

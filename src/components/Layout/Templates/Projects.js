@@ -55,18 +55,7 @@ export default function Projects() {
         
    
         <div>
-        <Box
-            component="img"
-            sx={{
-              height: 233,
-              width: 350,
-              alignItems: 'center',
-              maxHeight: { xs: 233, md: 167 },
-              maxWidth: { xs: 350, md: 250 },
-            }}
-            alt="Mwache's avatar imgure 😂"
-            src= {imgAvatar}
-        />
+        
                 <Typography component="h2" variant="h4" color="text.primary" textAlign="center">
                   Welcome to MwaChe's Site
                 </Typography>

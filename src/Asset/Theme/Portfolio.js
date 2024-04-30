@@ -69,10 +69,10 @@ const getDesignTokens = (mode) => ({
   },
 
   typography: {
-    fontFamily: ['"Inter", "sans-serif","Concert One","Inconsolata","Itim","Kosugi Maru"'].join(','),
+    fontFamily: ['"Gamja Flower","Averia Libre","Mansalva","Pangolin","Delicious Handrawn","Cagliostro","Architects Daughter", "sans-serif","Concert One","Inconsolata","Itim","Kosugi Maru"'].join(','),
     h1: {
       fontSize: 60,
-      fontWeight: 30,
+      fontWeight: 50,
       lineHeight: 78 / 70,
       letterSpacing: -0.2,
     },
@@ -86,7 +86,7 @@ const getDesignTokens = (mode) => ({
       lineHeight: 1.2,
     },
     h4: {
-      fontSize: 36,
+      fontSize: 26,
       fontWeight: 30,
       lineHeight: 1.5,
     },
@@ -108,8 +108,8 @@ const getDesignTokens = (mode) => ({
       fontSize: 20,
     },
     body2: {
-      fontWeight: 30,
-      fontSize: 14,
+      fontWeight: 36,
+      fontSize: 24,
     },
     caption: {
       fontWeight: 30,

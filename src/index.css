@@ -25,3 +25,264 @@ code {
   color: #1ff316;
   }
 
+/* ------------------------------------- my fonts code ------------------------------- */
+
+.rubik-marker-hatch-regular {
+  font-family: "Rubik Marker Hatch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.rubik-burned-regular {
+  font-family: "Rubik Burned", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.stalemate-regular {
+  font-family: "Stalemate", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.snowburst-one-regular {
+  font-family: "Snowburst One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.sniglet-regular {
+  font-family: "Sniglet", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sniglet-extrabold {
+  font-family: "Sniglet", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+.reenie-beanie-regular {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.redressed-regular {
+  font-family: "Redressed", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.pangolin-regular {
+  font-family: "Pangolin", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.oregano-regular {
+  font-family: "Oregano", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oregano-regular-italic {
+  font-family: "Oregano", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+.nosifer-regular {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.montez-regular {
+  font-family: "Montez", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.milonga-regular {
+  font-family: "Milonga", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.mansalva-regular {
+  font-family: "Mansalva", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.macondo-regular {
+  font-family: "Macondo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.lovers-quarrel-regular {
+  font-family: "Lovers Quarrel", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.koho-extralight {
+  font-family: "KoHo", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.koho-light {
+  font-family: "KoHo", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.koho-regular {
+  font-family: "KoHo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.koho-medium {
+  font-family: "KoHo", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.koho-semibold {
+  font-family: "KoHo", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.koho-bold {
+  font-family: "KoHo", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.koho-extralight-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.koho-light-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.koho-regular-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.koho-medium-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.koho-semibold-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.koho-bold-italic {
+  font-family: "KoHo", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.joti-one-regular {
+  font-family: "Joti One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.itim-regular {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.hi-melody-regular {
+  font-family: "Hi Melody", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.gamja-flower-regular {
+  font-family: "Gamja Flower", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.finger-paint-regular {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.eater-regular {
+  font-family: "Eater", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.dongle-regular {
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.delicious-handrawn-regular {
+  font-family: "Delicious Handrawn", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.cagliostro-regular {
+  font-family: "Cagliostro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.caesar-dressing-regular {
+  font-family: "Caesar Dressing", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.butcherman-regular {
+  font-family: "Butcherman", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.averia-libre-light {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.averia-libre-regular {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.averia-libre-bold {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.averia-libre-light-italic {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.averia-libre-regular-italic {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.averia-libre-bold-italic {
+  font-family: "Averia Libre", system-ui;
+  font-weight: 700;
+  font-style: italic;
+}
+.architects-daughter-regular {
+  font-family: "Architects Daughter", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.annie-use-your-telescope-regular {
+  font-family: "Annie Use Your Telescope", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+

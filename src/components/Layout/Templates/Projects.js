@@ -2,46 +2,44 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
-import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 import Me from './Me';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
+import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
+import { Link } from '@mui/material';
 
 
 
 const itemData = [
   {
     img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
-    author: '@bkristastucchio',
+    title: 'Lio Website',
+    link: '@bkristastucchio',
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
     img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
-    author: '@hjrc33',
+    title: 'Dashboard',
+    link: '@hjrc33',
     cols: 2,
   },
   {
     img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
-    author: '@arwinneil',
+    title: 'Mobile integration',
+    link: `https://images.unsplash.com/photo-1558642452-9d2a7deb7f62`,
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
     img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
-    author: '@tjdragotta',
+    title: 'Available on all platforms',
+    link: '@tjdragotta',
   } 
 ];
 
@@ -101,6 +99,7 @@ export default function Projects() {
                   <ListSubheader component="div">My Projects</ListSubheader>
                 </ImageListItem>
                 {itemData.map((item) => (
+                  <Link>
                   <ImageListItem key={item.img}>
                     <img
                       srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -110,17 +109,18 @@ export default function Projects() {
                     />
                     <ImageListItemBar
                       title={item.title}
-                      subtitle={item.author}
+                      subtitle={item.link}
                       actionIcon={
                         <IconButton
                           sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                           aria-label={`info about ${item.title}`}
                         >
-                          <InfoIcon />
+                          <LaunchRoundedIcon />
                         </IconButton>
                       }
                     />
                   </ImageListItem>
+                  </Link>
                 ))}
               </ImageList>
               

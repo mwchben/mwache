@@ -1,52 +1,52 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import Chip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
-import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 import Me from './Me';
-import imgProg from '../../../Asset/images/prog.jpg';
-import imgSVG from '../../../Asset/images/patternSVG.svg';
-import imgAvatar from '../../../Asset/images/avatar.png';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+import ListSubheader from '@mui/material/ListSubheader';
+import IconButton from '@mui/material/IconButton';
+import InfoIcon from '@mui/icons-material/Info';
 
 
-const items = [
+
+const itemData = [
   {
-    icon: <ViewQuiltRoundedIcon />,
-    title: 'Dashboard',
-    description:
-      'This item could provide a snapshot of the most important metrics or data points related to the product.',
+    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+    title: 'Breakfast',
+    author: '@bkristastucchio',
+    rows: 2,
+    cols: 2,
+    featured: true,
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: 'Mobile integration',
-    description:
-      'This item could provide information about the mobile app version of the product.',
+    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+    title: 'Hats',
+    author: '@hjrc33',
+    cols: 2,
   },
   {
-    icon: <DevicesRoundedIcon />,
-    title: 'Available on all platforms',
-    description:
-      'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
+    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+    title: 'Honey',
+    author: '@arwinneil',
+    rows: 2,
+    cols: 2,
+    featured: true,
   },
+  {
+    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+    title: 'Basketball',
+    author: '@tjdragotta',
+  } 
 ];
 
 export default function Projects() {
-  const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
-
-  const handleItemClick = (index) => {
-    setSelectedItemIndex(index);
-  };
-
-  const selectedFeature = items[selectedItemIndex];
+ 
 
   return (
     <>
@@ -66,6 +66,7 @@ export default function Projects() {
                   sx={{ mb: { xs: 2, sm: 4 }, mt: 2, p: 3}}
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                   Ut enim ad minim veniam, quis nostrm.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                    Ut enim ad minim veniam, quis nostrm.
                 </Typography>
         </div>
@@ -95,173 +96,34 @@ export default function Projects() {
 
 {/* ............................RIGHT.................... */}
             <Grid item xs={12} md={6}>
-              
-              {/* box for iPhoneSize */}
-              <Grid container item gap={2} sx={{ display: { xs: 'auto', sm: 'none' } }}>
-                {items.map(({ title }, index) => (
-                  <Chip
-                    key={index}
-                    label={title}
-                    onClick={() => handleItemClick(index)}
-                    sx={{
-                      borderColor: (theme) => {
-                        return selectedItemIndex === 'beige.light';
-                      },
-                      background: (theme) => {
-                        return selectedItemIndex === 'secondary.dark';
-                      },
-                      backgroundColor: selectedItemIndex === 'secondary.dark',
-                      '& .MuiChip-label': {
-                        color: selectedItemIndex === index ? 'secondary.main' : '',
-                      },
-                    }}
-                  />
-                ))}
-              </Grid>
-              
-              <Box
-                component={Card}
-                variant="outlined"
-                sx={{
-                  display: { xs: 'auto', sm: 'none' },
-                  mt: 4,
-                }}
-              >                
-               
-                <Box sx={{ px: 2, py: 2, backgroundColor: "#000" }}>
-                  <Typography color="text.primary" variant="body2" fontWeight="bold">
-                    {selectedFeature.title}
-                  </Typography>
-                  <Typography color="text.secondary" variant="body2" sx={{ my: 0.5 }}>
-                    {selectedFeature.description}
-                  </Typography>
-                  <Link
-                    color="beige"
-                    variant="h4"
-                    fontWeight="bold"
-                    sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      '& > svg': { transition: '0.5s' },
-                      '&:hover > svg': { transform: 'translateX(2px)' },
-                    }}
-                  >
-                    <span>Learn more</span>
-                    <ChevronRightRoundedIcon
-                      fontSize="small"
-                      sx={{ mt: '1px', ml: '2px' }}
+              <ImageList sx={{ width: 500, height: 450 }}>
+                <ImageListItem key="Subheader" cols={2}>
+                  <ListSubheader component="div">My Projects</ListSubheader>
+                </ImageListItem>
+                {itemData.map((item) => (
+                  <ImageListItem key={item.img}>
+                    <img
+                      srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                      src={`${item.img}?w=248&fit=crop&auto=format`}
+                      alt={item.title}
+                      loading="lazy"
                     />
-                  </Link>
-                </Box>
-                <Box
-                  sx={{
-                   minHeight: 280,
-                   mt: 4,
-                   p: 4                 
-                  }}
-                ><  Me/></Box>
-              </Box>
-            
-              
-
-              {/* box for WebSite size */}
-              <Stack
-                direction="column"
-                justifyContent="center"
-                alignItems="flex-start"
-                spacing={2}
-                useFlexGap
-                sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } }}
-              >
-                {items.map(({ icon, title, description }, index) => (
-                  <Card
-                    key={index}
-                    variant="outlined"
-                    component={Button}
-                    onClick={() => handleItemClick(index)}
-                    sx={{
-                      p: 3,
-                      height: 'fit-content',
-                      width: '100%',
-                      background: 'none',
-                      backgroundColor:
-                        selectedItemIndex === index ? 'action.selected' : undefined,
-                      borderColor: (theme) => {
-                        if (theme.palette.mode === 'light') {
-                          return selectedItemIndex === index
-                            ? 'beige.light'
-                            : 'secondary.30';
-                        }
-                        return selectedItemIndex === index ? 'beige.dark' : 'secondary.40';
-                      },
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        width: '100%',
-                        display: 'flex',
-                        textAlign: 'left',
-                        flexDirection: { xs: 'column', md: 'row' },
-                        alignItems: { md: 'center' },
-                        gap: 2.5,
-                      }}
-                    >
-                      <Box
-                        sx={{
-                          color: (theme) => {
-                            if (theme.palette.mode === 'light') {
-                              return selectedItemIndex === index
-                                ? 'primary.main'
-                                : 'grey.300';
-                            }
-                            return selectedItemIndex === index
-                              ? 'primary.main'
-                              : 'grey.700';
-                          },
-                        }}
-                      >
-                        {icon}
-                      </Box>
-                      <Box sx={{ textTransform: 'none' }}>
-                        <Typography
-                          color="text.primary"
-                          variant="body2"
-                          fontWeight="bold"
+                    <ImageListItemBar
+                      title={item.title}
+                      subtitle={item.author}
+                      actionIcon={
+                        <IconButton
+                          sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                          aria-label={`info about ${item.title}`}
                         >
-                          {title}
-                        </Typography>
-                        <Typography
-                          color="text.secondary"
-                          variant="body2"
-                          sx={{ my: 0.5 }}
-                        >
-                          {description}
-                        </Typography>
-                        <Link
-                          color="primary"
-                          variant="body2"
-                          fontWeight="bold"
-                          sx={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            '& > svg': { transition: '0.2s' },
-                            '&:hover > svg': { transform: 'translateX(2px)' },
-                          }}
-                          onClick={(event) => {
-                            event.stopPropagation();
-                          }}
-                        >
-                          <span>Learn more</span>
-                          <ChevronRightRoundedIcon
-                            fontSize="small"
-                            sx={{ mt: '1px', ml: '2px' }}
-                          />
-                        </Link>
-                      </Box>
-                    </Box>
-                  </Card>
+                          <InfoIcon />
+                        </IconButton>
+                      }
+                    />
+                  </ImageListItem>
                 ))}
-              </Stack>
+              </ImageList>
+              
             </Grid>
 
        

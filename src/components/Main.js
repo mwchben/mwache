@@ -5,8 +5,7 @@ import Portfolio from '../Asset/Theme/Portfolio';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 export default function Main() {
-  const [mode, setMode] = React.useState('light');
-  const myTheme = createTheme(Portfolio(mode));
+  const myTheme = createTheme(Portfolio());
   return (
     <ThemeProvider theme={myTheme}>
       <Topbar />

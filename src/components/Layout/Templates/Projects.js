@@ -9,7 +9,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
-import { Link } from '@mui/material';
+import { Box, Link } from '@mui/material';
 
 
 
@@ -92,15 +92,23 @@ export default function Projects() {
                
             </Grid>
 
-{/* ............................RIGHT.................... */}
-            <Grid item xs={12} md={6}>
-              <ImageList sx={{ width: 500, height: 450 }}>
+{/* ............................RIGHT.................sx={{ width: 500, height: 450 }}... */}
+            <Grid item >
+              <ImageList >
                 <ImageListItem key="Subheader" cols={2}>
                   <ListSubheader component="div">My Projects</ListSubheader>
                 </ImageListItem>
                 {itemData.map((item) => (
-                  <Link>
-                  <ImageListItem key={item.img}>
+                  <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    gap: 1,
+                    height: '100%',
+                  }}
+                  >
+                  <ImageListItem key={item.img} xs={12} md={6}>
                     <img
                       srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                       src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -120,7 +128,7 @@ export default function Projects() {
                       }
                     />
                   </ImageListItem>
-                  </Link>
+                  </Box>
                 ))}
               </ImageList>
               

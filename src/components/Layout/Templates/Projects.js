@@ -108,7 +108,7 @@ export default function Projects() {
                     height: '100%',
                   }}
                   >
-                  <ImageListItem key={item.img} xs={12} md={6}>
+                  {/* <ImageListItem key={item.img} xs={12} md={6}>
                     <img
                       srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                       src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -127,7 +127,29 @@ export default function Projects() {
                         </IconButton>
                       }
                     />
-                  </ImageListItem>
+                  </ImageListItem> */}
+                   <Typography gutterBottom variant="caption" component="div">
+                {article.tag}
+              </Typography>
+              <TitleTypography
+                gutterBottom
+                variant="h6"
+                onFocus={() => handleFocus(index)}
+                onBlur={handleBlur}
+                tabIndex={0}
+                className={focusedCardIndex === index ? 'Mui-focused' : ''}
+              >
+                {article.title}
+                <NavigateNextRoundedIcon
+                  className="arrow"
+                  sx={{ fontSize: '1rem' }}
+                />
+              </TitleTypography>
+              <StyledTypography variant="body2" color="text.secondary" gutterBottom>
+                {article.description}
+              </StyledTypography>
+
+              <Author authors={article.authors} />
                   </Box>
                 ))}
               </ImageList>
